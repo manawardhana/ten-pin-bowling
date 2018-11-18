@@ -1,12 +1,30 @@
 # ten-pin-bowling
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library that implements functionality for Ten Pin Bawling Score Card.
 
-## Usage
+## Prerequisites
+- [Leiningen](https://leiningen.org)
 
-FIXME
+## Instructions - Running tests
+```
+lein test
+```
 
-## License
+## Project Structure
+```
+.
+├── README.md
+├── project.clj
+├── resources
+├── src
+│   └── ten_pin_bowling
+│       └── core.clj
+└── test
+    └── ten_pin_bowling
+        └── core_test.clj
+ ```
+ 
+ ## License
 
 Copyright © 2018 FIXME
 

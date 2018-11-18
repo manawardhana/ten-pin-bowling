@@ -24,9 +24,16 @@ lein test
         └── core_test.clj
  ```
  
- ## License
+## Appraoch to the Solution
+- Game is a sequence of immutable events
+- Everything else (score, completeness etc) can be derived from just from the event history
+- A `frame` is the atomic succession unit of state. The alternate would be `rounds`. This is for simplicity.
+- No state is stored anywhere, but passed around to functions and returned from functions. This is ok with the amount of data we have to deal with (21 integers per game) and due to the nature of Clojure.
 
-Copyright © 2018 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+### Score Card Format
+```
+{:score 15
+ :frames [[5 2] 
+          [4 4]]
+ :completed false}
+```
